@@ -24,6 +24,7 @@ services:
     restart: always
     volumes:
       - db:/var/lib/mysql
+      - ./mysql.cnf:/etc/mysql/my.cnf
     environment:
       MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASS
       MYSQL_DATABASE: $MYSQL_DATABASE
